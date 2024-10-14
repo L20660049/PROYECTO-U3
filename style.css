@@ -1,0 +1,173 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif; /* Fuente utilizada en el cuerpo del documento */
+    margin: 0; /* Elimina márgenes del body */
+    padding: 0; /* Elimina el relleno del body */
+    background-color: #e8f5e9; /* Fondo verde pastel suave */
+}
+
+/* Menú de Navegación */
+.navbar {
+    background-color: #2e7d32; /* Color verde oscuro para el fondo del navbar */
+    position: fixed; /* El menú se mantiene fijo en la parte superior al hacer scroll */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    top: 0; /* Se posiciona en la parte superior */
+    display: flex; /* Flexbox para alinear elementos horizontalmente */
+    justify-content: space-between; /* Distribuye los elementos equitativamente */
+    align-items: center; /* Centra verticalmente los elementos dentro del navbar */
+    padding: 10px; /* Relleno de 10px alrededor del contenido del navbar */
+    z-index: 1000; /* Se asegura de que el navbar esté por encima de otros elementos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil debajo del navbar */
+}
+
+.logo {
+    color: #fff; /* Color blanco para el texto del logo */
+    font-size: 24px; /* Tamaño de fuente para el logo */
+    font-weight: bold; /* Texto en negrita */
+    letter-spacing: 1.5px; /* Espaciado entre letras */
+}
+
+.nav-links {
+    display: flex; /* Flexbox para alinear enlaces de navegación horizontalmente */
+    list-style: none; /* Elimina viñetas de la lista */
+}
+
+.nav-links li {
+    margin: 0 10px; /* Espacio entre los elementos del menú */
+}
+
+.nav-links a {
+    color: white; /* Color blanco para los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    padding: 8px; /* Espacio alrededor del texto del enlace */
+    transition: 0.3s; /* Transición suave al hacer hover */
+}
+
+.nav-links a:hover {
+    background-color: #66bb6a; /* Cambia a verde claro al hacer hover */
+    border-radius: 4px; /* Bordes redondeados al hacer hover */
+}
+
+/* Menú hamburguesa */
+.hamburger {
+    display: none; /* Oculta el menú hamburguesa por defecto */
+    flex-direction: column; /* Alinea las barras verticalmente */
+    cursor: pointer; /* Muestra un puntero de mano al pasar el ratón */
+}
+
+.hamburger .line {
+    width: 25px; /* Ancho de las líneas del menú hamburguesa */
+    height: 3px; /* Altura de las líneas */
+    background-color: white; /* Color blanco para las líneas */
+    margin: 5px; /* Espacio entre las líneas */
+}
+
+/* Contenido */
+.content-section {
+    padding: 60px 20px; /* Espacio interno para la sección de contenido */
+    margin-top: 60px; /* Añade margen superior para evitar que el contenido quede debajo del menú */
+    background-color: white; /* Fondo blanco para las secciones de contenido */
+    border-radius: 8px; /* Bordes redondeados para el contenido */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil para las secciones */
+}
+
+h1, h2 {
+    color: #2e7d32; /* Color verde oscuro para los encabezados */
+    font-weight: bold; /* Encabezados en negrita */
+}
+
+p {
+    color: #555; /* Color gris oscuro para los párrafos */
+}
+
+/* Galería */
+.gallery-section {
+    padding: 20px; /* Relleno interno para la sección de galería */
+}
+
+.gallery {
+    display: flex; /* Flexbox para la galería */
+    flex-wrap: wrap; /* Permite que los elementos de la galería se distribuyan en varias líneas */
+    gap: 20px; /* Espacio entre los elementos de la galería */
+    justify-content: center; /* Alinea los elementos al centro */
+}
+
+.gallery-item {
+    position: relative; /* Posición relativa para el hover */
+    width: calc(20% - 20px); /* Cada elemento ocupa el 20% del ancho menos 20px de espacio */
+    cursor: pointer; /* Cambia el cursor a mano al pasar sobre un elemento */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga del contenedor */
+    background-color: #fff; /* Fondo blanco para cada ítem de la galería */
+    border: 2px solid #66bb6a; /* Borde verde claro */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves para zoom y sombra */
+}
+
+.gallery-item img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: 150px; /* Altura fija de la imagen */
+    object-fit: cover; /* Asegura que la imagen mantenga su proporción */
+    border-radius: 6px; /* Bordes redondeados para las imágenes */
+    transition: transform 0.3s ease; /* Transición suave al hacer hover */
+}
+
+.gallery-item:hover {
+    transform: scale(1.05); /* Zoom en todo el elemento al hacer hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más intensa al hacer hover */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* Aumenta el zoom de la imagen al hacer hover */
+}
+
+.gallery-item p {
+    text-align: center; /* Centra el texto del pie de la galería */
+    color: #2e7d32; /* Color verde oscuro para el texto */
+    margin: 10px 0 0; /* Margen superior de 10px, sin margen inferior */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Modal */
+.modal {
+    display: none; /* Oculta el modal por defecto */
+    position: fixed; /* El modal se fija en la pantalla */
+    z-index: 1000; /* Asegura que el modal esté por encima de otros elementos */
+    left: 0; /* Se posiciona en la parte izquierda */
+    top: 0; /* Se posiciona en la parte superior */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    height: 100%; /* Ocupa toda la altura de la pantalla */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente negro */
+    justify-content: center; /* Centra el modal horizontalmente */
+    align-items: center; /* Centra el modal verticalmente */
+}
+
+.modal-content {
+    background-color: #fff; /* Fondo blanco para el contenido del modal */
+    padding: 20px; /* Espacio interno del modal */
+    border-radius: 8px; /* Bordes redondeados */
+    position: relative; /* Posiciona elementos dentro del modal */
+    max-width: 500px; /* Ancho máximo del modal */
+    width: 80%; /* El modal ocupa el 80% del ancho de la pantalla */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para el modal */
+}
+
+.close {
+    position: absolute; /* Posición absoluta dentro del modal */
+    top: 10px; /* Posiciona el botón de cierre en la parte superior */
+    right: 10px; /* Posiciona el botón de cierre a la derecha */
+    cursor: pointer; /* Muestra el cursor de mano sobre el botón de cierre */
+    font-size: 18px; /* Tamaño de fuente para el botón de cierre */
+}
+
+/* Medios de comunicación (responsividad) */
+@media screen and (max-width: 768px) {
+    .gallery-item {
+        width: calc(50% - 10px); /* 2 elementos por fila en pantallas medianas */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery-item {
+        width: 100%; /* 1 elemento por fila en pantallas pequeñas */
+    }
+}

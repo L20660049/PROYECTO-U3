@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Declaración del tipo de documento como HTML5 -->
+<head>
+    <!-- Cabecera del documento -->
+    <meta charset="UTF-8">
+    <!-- Establece el juego de caracteres del documento en UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura la ventana gráfica para dispositivos móviles -->
+    <title>Proyecto Web</title>
+    <!-- Título del documento que se muestra en la pestaña del navegador -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Enlace al archivo CSS externo para los estilos -->
+</head>
+
+<body>
+    <!-- Cuerpo del documento -->
+
+    <!-- Menú de Navegación -->
+    <nav class="navbar">
+        <!-- Etiqueta de navegación principal -->
+        <div class="logo">Mi Proyecto</div>
+        <!-- Div para mostrar el logo o nombre del proyecto -->
+        <ul class="nav-links">
+            <!-- Lista de enlaces del menú de navegación -->
+            <li><a href="#inicio">Inicio</a></li>
+            <!-- Enlace a la sección de inicio -->
+            <li><a href="#servicios">Servicios</a></li>
+            <!-- Enlace a la sección de servicios -->
+            <li><a href="#sobre-mi">Sobre Mí</a></li>
+            <!-- Enlace a la sección sobre mí -->
+            <li><a href="#contacto">Contacto</a></li>
+            <!-- Enlace a la sección de contacto -->
+        </ul>
+        <div class="hamburger">
+            <!-- Icono de hamburguesa para menú en móviles -->
+            <span class="line"></span>
+            <!-- Línea 1 del ícono de menú -->
+            <span class="line"></span>
+            <!-- Línea 2 del ícono de menú -->
+            <span class="line"></span>
+            <!-- Línea 3 del ícono de menú -->
+        </div>
+    </nav>
+
+    <!-- Contenido -->
+    <section id="inicio" class="content-section">
+        <!-- Sección de bienvenida -->
+        <h1>Bienvenido a Mi Proyecto</h1>
+        <!-- Título principal de la sección de inicio -->
+        <p>¡Bienvenidos! Me alegra que hayas decidido explorar este proyecto. Aquí encontrarás una Galería de
+            los ejercicios realizados en clase. Con este proyecto damos a conocer más la materia de programación
+            web, lo que trabajamos esperando que te intereses en ella.</p>
+        <!-- Párrafo descriptivo sobre la sección de inicio -->
+    </section>
+
+    <section id="servicios" class="content-section">
+        <!-- Sección de servicios -->
+        <h2>Servicios</h2>
+        <!-- Título de la sección de servicios -->
+        <p>En este proyecto, te ofrece una mirada a diferentes trabajos, contiene programas que los puedes usar 
+        para la escuela o ideas para tu galería de fotos, llevar el tiempo, entre otros más.</p>
+        <!-- Párrafo descriptivo sobre los servicios ofrecidos en el proyecto -->
+    </section>
+
+    <section id="sobre-mi" class="content-section">
+        <!-- Sección sobre mí -->
+        <h2>Sobre Mí</h2>
+        <!-- Título de la sección sobre mí -->
+        <p>Soy Nancy Paola De León López, estudiante del Instituto Tecnológico de Matehuala en la carrera de 
+            Ingeniería en Sistemas Computacionales. Me gusta mi etapa de estudiante, consejo tú tienes que llevar
+            la carrera porque si no ella te lleva a ti. Este proyecto es realizado con el fin de poner en práctica
+        lo aprendido en clase.</p>
+        <!-- Párrafo descriptivo sobre la autora del proyecto -->
+    </section>
+
+    <section id="contacto" class="content-section">
+        <!-- Sección de contacto -->
+        <h2>Contacto</h2>
+        <!-- Título de la sección de contacto -->
+        <p> Tel: 4888821314
+            <!-- Número de teléfono -->
+            Chat: l20660049@matehuala.tecnm.mx
+            <!-- Dirección de correo electrónico para contacto -->
+        </p>
+    </section>
+
+    <!-- Galería de Proyectos -->
+    <section id="galeria" class="gallery-section">
+        <!-- Sección de galería -->
+        <h2>Proyectos</h2>
+        <!-- Título de la sección de galería -->
+        <div class="gallery">
+            <!-- Contenedor para los elementos de la galería -->
+            <div class="gallery-item" data-modal="proyecto1">
+                <img src="no me gusta la programacion.jpg" alt="Mensaje">
+                <!-- Imagen del proyecto 1 -->
+                <p>Mensaje</p>
+                <!-- Descripción del proyecto 1 -->
+            </div>
+            <!-- Repetir para cada proyecto... -->
+            <!-- Aquí incluirás otros items de la galería, siguiendo la misma estructura -->
+        </div>
+    </section>
+
+    <!-- Modales -->
+    <div class="modal" id="modal-proyecto1">
+        <!-- Contenedor del modal para el proyecto 1 -->
+        <div class="modal-content">
+            <!-- Contenido del modal -->
+            <span class="close">&times;</span>
+            <!-- Botón para cerrar el modal -->
+            <h3>Proyecto Mensaje</h3>
+            <!-- Título del proyecto dentro del modal -->
+            <p>Al abrir el link aparecerá un mensaje diciendo "no me gusta la programación".<br>
+                <a href="https://l20660049.github.io/UNIDAD3-ACTIVIDAD1/" target="_blank">Ver Proyecto</a>
+            </p>
+            <!-- Descripción y enlace del proyecto dentro del modal -->
+        </div>
+    </div>
+    <!-- Repetir para cada modal... -->
+    <!-- Aquí incluirás otros modales para los proyectos, siguiendo la misma estructura -->
+
+    <script src="script.js"></script>
+    <!-- Enlace al archivo JavaScript externo -->
+
+</body>
+</html>
+
+
+
