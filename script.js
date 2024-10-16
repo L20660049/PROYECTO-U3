@@ -1,57 +1,58 @@
-// Menú
-const hamburger = document.querySelector('.hamburger'); 
-// Selecciona el elemento del DOM con la clase 'hamburger' (el ícono del menú).
-
-const navLinks = document.querySelector('.nav-links'); 
-// Selecciona el elemento del DOM con la clase 'nav-links' (el contenedor de los enlaces de navegación).
+// Menú de navegación para dispositivos móviles
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active'); 
-    // Al hacer clic en el ícono del menú, se añade o elimina la clase 'active' en 'nav-links', lo que activa o desactiva el menú.
+    navLinks.classList.toggle('active');
 });
 
-// Funcionalidad de los modales
-const galleryItems = document.querySelectorAll('.gallery-item'); 
-// Selecciona todos los elementos con la clase 'gallery-item' (los elementos de la galería).
+// Funcionalidad de navegación por secciones
+function mostrarSeccion(idSeccion) {
+    // Ocultar todas las secciones
+    const secciones = document.querySelectorAll('.content-section, .gallery-section');
+    secciones.forEach(seccion => seccion.style.display = 'none');
 
-const modals = document.querySelectorAll('.modal'); 
-// Selecciona todos los elementos con la clase 'modal' (las ventanas modales).
+    // Mostrar la sección correspondiente
+    const seccion = document.getElementById(idSeccion);
+    if (seccion) {
+        seccion.style.display = 'block';
+    }
+}
 
-const closeButtons = document.querySelectorAll('.close'); 
-// Selecciona todos los elementos con la clase 'close' (los botones de cierre de los modales).
-
-galleryItems.forEach(item => {
-    item.addEventListener('click', () => {
-        const modalId = `#modal-${item.dataset.modal}`; 
-        // Crea un identificador dinámico para el modal en función del atributo 'data-modal' del ítem de la galería.
-
-        document.querySelector(modalId).style.display = 'block'; 
-        // Muestra el modal correspondiente cambiando su propiedad 'display' a 'block'.
-    });
+// Mostrar la sección "Inicio" por defecto al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+    mostrarSeccion('inicio');
 });
 
-closeButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        button.parentElement.parentElement.style.display = 'none'; 
-        // Al hacer clic en el botón de cierre, se oculta el modal (el modal es el abuelo del botón de cierre).
-    });
+// Modal de contenido adicional
+const contentModal = document.getElementById('myModal');
+const modalIframe = document.getElementById('modal-iframe');
+const closeContentModal = document.getElementById('closeContentModal');
+
+// Función para abrir el modal de contenido adicional
+function openProject(url) {
+    contentModal.style.display = 'block';
+    modalIframe.src = url;
+}
+
+// Cerrar el modal de contenido adicional
+closeContentModal.addEventListener('click', () => {
+    contentModal.style.display = 'none';
 });
 
-window.onclick = (event) => {
-    modals.forEach(modal => {
-        if (event.target === modal) {
-            modal.style.display = 'none'; 
-            // Si se hace clic fuera del contenido del modal, se cierra el modal (comparando el evento de clic con el propio modal).
-        }
-    });
-};
-
-window.onkeydown = (event) => {
-    if (event.key === 'Escape') {
-        modals.forEach(modal => {
-            modal.style.display = 'none'; 
-            // Si se presiona la tecla 'Escape', todos los modales se cierran.
-        });
+// Cerrar los modales al hacer clic fuera de ellos
+window.onclick = function(event) {
+    if (event.target === contentModal) {
+        contentModal.style.display = 'none';
     }
 };
+
+// Cerrar los modales con la tecla "Escape"
+window.onkeydown = function(event) {
+    if (event.key === 'Escape') {
+        contentModal.style.display = 'none';
+    }
+};
+
+
 
