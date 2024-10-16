@@ -12,14 +12,13 @@
     <nav class="navbar">
         <div class="logo">Mi Proyecto</div>
         <ul class="nav-links">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#sobre-mi">Sobre Mí</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <li><a href="#Proyecto">Proyectos</a></li>
+            <li><a href="#inicio" onclick="mostrarSeccion('inicio')">Inicio</a></li>
+            <li><a href="#servicios" onclick="mostrarSeccion('servicios')">Servicios</a></li>
+            <li><a href="#sobre-mi" onclick="mostrarSeccion('sobre-mi')">Sobre Mí</a></li>
+            <li><a href="#contacto" onclick="mostrarSeccion('contacto')">Contacto</a></li>
+            <li><a href="#proyecto" onclick="mostrarSeccion('proyecto')">Proyectos</a></li>
         </ul>
         <div class="hamburger">
-            <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
@@ -34,258 +33,111 @@
             web, lo que trabajamos esperando que te intereses en ella.</p>
     </section>
 
-    <section id="servicios" class="content-section">
+    <section id="servicios" class="content-section" style="display:none;">
         <h2>Servicios</h2>
         <p>En este proyecto, te ofrece una mirada a diferentes trabajos, contiene programas que los puedes usar 
-            para la escuela o ideas para tu galería de fotos, llevar el tiempo, entre otros más. </p>
+            para la escuela o ideas para tu galería de fotos, llevar el tiempo, entre otros más.</p>
     </section>
 
-    <section id="sobre-mi" class="content-section">
+    <section id="sobre-mi" class="content-section" style="display:none;">
         <h2>Sobre Mí</h2>
         <p>Soy Nancy Paola De León López, estudiante del Instituto Tecnológico de Matehuala en la carrera de 
-            Ingeniería en Sistemas Computacionales. Me gusta mi etapa de estudiante, consejo tú tienes que llevar 
-            la carrera porque si no ella te lleva a ti. Este proyecto se realiza con el fin de poner en práctica lo
-             aprendido en clase.</p>
+            Ingeniería en Sistemas Computacionales.</p>
     </section>
 
-    <section id="contacto" class="content-section">
+    <section id="contacto" class="content-section" style="display:none;">
         <h2>Contacto</h2>
-        <p>Tel: 4888821314 Chat: l20660049@matehuala.tecnm.mx</p>
+        <p>Tel: 4888821314 
+           Chat: l20660049@matehuala.tecnm.mx</p>
     </section>
 
     <!-- Galería de Proyectos -->
-    <section id="Proyecto" class="gallery-section">
+    <section id="proyecto" class="gallery-section" style="display:none;">
         <h2>Proyectos</h2>
         <div class="gallery">
-            <div class="gallery-item" data-modal="proyecto1">
+            <div class="gallery-item" onclick="openProject('https://l20660049.github.io/UNIDAD3-ACTIVIDAD1/')">
                 <img src="no me gusta la programacion.jpg" alt="Mensaje">
                 <p>Mensaje</p>
-            </div>
-            <div class="gallery-item" data-modal="proyecto2">
-                <img src="Cambio de colores.jpg" alt="Cambio de colores">
-                <p>Cambio de colores</p>
-            </div>
-            <div class="gallery-item" data-modal="proyecto3">
-                <img src="validacion.png" alt="validacion">
-                <p>Formulario</p>
-            </div>
-            <div class="gallery-item" data-modal="proyecto4">
-                <img src="suma.png" alt="Formulario">
+            </div>    
+            <div class="gallery-item" onclick="openProject('https://l20660049.github.io/UNIDAD3-ACTIVIDAD2/')">
+                <img src="Cambio de colores.jpg" alt="Cambio de Colores">
+                <p>Cambio de Colores</p>
+            </div>    
+            <div class="gallery-item" onclick="openProject('https://l20660049.github.io/UNIDAD3-ACTIVIDAD3/')">
+                <img src="validacion.png" alt="Formulario">
+                <p>Formulario</p> 
+            </div>    
+            <div class="gallery-item" onclick="openProject('https://l20660049.github.io/UNIDAD3-ACTIVIDAD4/')">
+                <img src="suma.png" alt="Formulario de Suma">
                 <p>Formulario de Suma</p>
-            </div>
-            <div class="gallery-item" data-modal="proyecto5">
-                <img src="contador.png" alt="Contador">
-                <p>Contador Simple</p>
-            </div>
-            <div class="gallery-item" data-modal="proyecto6">
+            </div>    
+            <div class="gallery-item" onclick="openProject('https://l20660049.github.io/UNIDAD3-ACTIVIDAD5/')">
+                <img src="contador.png" alt="Contador Simple">
+                <p>Contador Sencillo</p>
+            </div>    
+            <div class="gallery-item" onclick="openProject('https://l20660049.github.io/UNIDAD3-ACTIVIDAD6/')">
                 <img src="cambiar imagen.jpg" alt="Cambio de foto">
-                <p>Cambiar de imagen</p>
-            </div>
-            <div class="gallery-item" data-modal="proyecto7">
+                <p>Cambiar de Imagen</p>
+            </div>    
+            <div class="gallery-item" onclick="openProject('https://l20660049.github.io/UNIDAD3-ACTIVIDAD7/')">
                 <img src="temporizador.jpg" alt="Temporizador">
                 <p>Temporizador</p>
-            </div>
-            <div class="gallery-item" data-modal="proyecto8">
-                <img src="lista.jpg" alt="Lista de Tareas">
+            </div>    
+            <div class="gallery-item" onclick="openProject('https://l20660049.github.io/PORTAFOLIO-ACT1/')">
+                <img src="lista.jpg" alt="Lista de Tarea">
                 <p>Lista de Tareas</p>
-            </div>
-            <div class="gallery-item" data-modal="proyecto9">
+            </div>    
+            <div class="gallery-item" onclick="openProject('https://l20660049.github.io/PORTAFOLIO-ACT2/')">
                 <img src="juego.jpg" alt="Piedra, Papel o Tijeras">
-                <p>Piedra, Papel o Tijeras</p>
-            </div>
-            <div class="gallery-item" data-modal="proyecto10">
+                <p>Piedra, Papel o Tijeras</p> 
+            </div>    
+            <div class="gallery-item" onclick="openProject('https://l20660049.github.io/PORTAFOLIO-ACT3/')">
                 <img src="filtro.png" alt="Filtro">
                 <p>Tabla</p>
-            </div>
-            <div class="gallery-item" data-modal="proyecto11">
+            </div>    
+            <div class="gallery-item" onclick="openProject('https://l20660049.github.io/PORTAFOLIO-ACT4/')">
                 <img src="galeria.jpg" alt="Galeria">
                 <p>Galeria</p>
-            </div>
-            <div class="gallery-item" data-modal="proyecto12">
+            </div>    
+            <div class="gallery-item" onclick="openProject('https://l20660049.github.io/PORTAFOLIO-ACT5/')">
                 <img src="calculadora.jpg" alt="Calculadora">
-                <p>Calculadora Basica</p>
-            </div>
-            <div class="gallery-item" data-modal="proyecto13">
+                <p>Calculadora básica</p> 
+            </div>    
+            <div class="gallery-item" onclick="openProject('https://l20660049.github.io/PORTAFOLIO-ACT6/')">
                 <img src="convertidor.jpg" alt="Convertidor">
-                <p>Convertidor de Unidad</p>
-            </div>
-            <div class="gallery-item" data-modal="proyecto14">
-                <img src="palabras.jpg" alt="Contador de Palabras Y caracteres">
-                <p>Contador de Palabras y Caracteres</p>    
-            </div>
-            <div class="gallery-item" data-modal="proyecto15">
-                <img src="cronometro.jpg" alt="Cronometro">
-                <p>Cronometro</p>
-            </div>
-            <div class="gallery-item" data-modal="proyecto16">
+                <p>Convertidor de Unidades</p> 
+            </div>    
+            <div class="gallery-item" onclick="openProject('https://l20660049.github.io/PORTAFOLIO-ACT7/')">
+                <img src="palabras.jpg" alt="Contador de Palabras y Caracteresr">
+                <p>Contador de Palabras y Caracteres</p> 
+            </div>    
+            <div class="gallery-item" onclick="openProject('https://l20660049.github.io/PORTAFOLIO-ACT9/')">
+                <img src="cronometro.jpg" alt="Cronómetro">
+                <p>Cronómetro</p> 
+            </div>    
+            <div class="gallery-item" onclick="openProject('https://l20660049.github.io/ACTIVIDAD1-GALERIA/')">
                 <img src="collage.jpg" alt="Galeria">
-                <p>Galeria Aleatoria</p>
-            </div>
-            <div class="gallery-item" data-modal="proyecto17">
+                <p>Galeria Aleatoria</p>  
+            </div>    
+            <div class="gallery-item" onclick="openProject('https://l20660049.github.io/ACTIVIDAD3-NOTAS/')">
                 <img src="notas.jpg" alt="Nota">
-                <p>Notas</p>
+                <p>Notas</p>                                      
             </div>
-        </div>
-    </section>
+            <!-- Modal para mostrar contenido adicional -->
+             <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="closeContentModal">&times;</span>
+                    <iframe id="modal-iframe" class="modal-iframe" src=""></iframe>
+                </div>
+            </div>
+            <!-- Iframe para los proyectos -->
+             <div class="project-display">
+                <iframe id="project-iframe" src="" frameborder="0" width="100%" height="500px"></iframe>
+            </div>
 
-    <!-- Modales -->
-    <div class="modal" id="modal-proyecto1">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Proyecto Mensaje</h3>
-            <p>Al abrir el link aparecerá un mensaje diciendo "no me gusta la programación".<br>
-                <a href="https://l20660049.github.io/UNIDAD3-ACTIVIDAD1/" target="_blank">Ver Proyecto</a>
-            </p>
-        </div>
-    </div>
-    <div class="modal" id="modal-proyecto2">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Cambio de colores</h3>
-            <p>Un proyecto que cambia los colores de la página.<br>
-                <a href="https://l20660049.github.io/UNIDAD3-ACTIVIDAD2/" target="_blank">Ver Proyecto</a>
-            </p>
-        </div>
-    </div>
-    <div class="modal" id="modal-proyecto3">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Formulario</h3>
-            <p>Un formulario que valida la información ingresada.<br>
-                <a href="https://l20660049.github.io/UNIDAD3-ACTIVIDAD3/" target="_blank">Ver Proyecto</a>
-            </p>
-        </div>
-    </div>
-    <div class="modal" id="modal-proyecto4">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Formulario de Suma</h3>
-            <p>Un formulario que realiza la suma de dos números.<br>
-                <a href="https://l20660049.github.io/UNIDAD3-ACTIVIDAD4/" target="_blank">Ver Proyecto</a>
-            </p>
-        </div>
-    </div>
-    <div class="modal" id="modal-proyecto5">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Contador Simple</h3>
-            <p>Un contador que aumenta o disminuye el valor.<br>
-                <a href="https://l20660049.github.io/UNIDAD3-ACTIVIDAD5/" target="_blank">Ver Proyecto</a>
-            </p>
-        </div>
-    </div>
-    <div class="modal" id="modal-proyecto6">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Cambiar de imagen</h3>
-            <p>Un proyecto que cambia la imagen mostrada al hacer clic.<br>
-                <a href="https://l20660049.github.io/UNIDAD3-ACTIVIDAD6/" target="_blank">Ver Proyecto</a>
-            </p>
-        </div>
-    </div>
-    <div class="modal" id="modal-proyecto7">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Temporizador</h3>
-            <p>Un temporizador que cuenta hacia abajo.<br>
-                <a href="https://l20660049.github.io/UNIDAD3-ACTIVIDAD7/" target="_blank">Ver Proyecto</a>
-            </p>
-        </div>
-    </div>
-    <div class="modal" id="modal-proyecto8">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Lista de Tareas</h3>
-            <p>Una aplicación para gestionar tareas.<br>
-                <a href="https://l20660049.github.io/PORTAFOLIO-ACT1/" target="_blank">Ver Proyecto</a>
-            </p>
-        </div>
-    </div>
-    <div class="modal" id="modal-proyecto9">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Piedra, Papel o Tijeras</h3>
-            <p>Un juego de piedra, papel o tijeras.<br>
-                <a href="https://l20660049.github.io/PORTAFOLIO-ACT2/" target="_blank">Ver Proyecto</a>
-            </p>
-        </div>
-    </div>
-    <div class="modal" id="modal-proyecto10">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Tabla</h3>
-            <p>Un proyecto que muestra una tabla de datos.<br>
-                <a href="https://l20660049.github.io/PORTAFOLIO-ACT3/" target="_blank">Ver Proyecto</a>
-            </p>
-        </div>
-    </div>
-    <div class="modal" id="modal-proyecto11">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Galería</h3>
-            <p>Una galería de imágenes.<br>
-                <a href="https://l20660049.github.io/PORTAFOLIO-ACT4/" target="_blank">Ver Proyecto</a>
-            </p>
-        </div>
-    </div>
-    <div class="modal" id="modal-proyecto12">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Calculadora Básica</h3>
-            <p>Una calculadora básica en JavaScript.<br>
-                <a href="https://l20660049.github.io/PORTAFOLIO-ACT5/" target="_blank">Ver Proyecto</a>
-            </p>
-        </div>
-    </div>
-    <div class="modal" id="modal-proyecto13">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Convertidor de Unidad</h3>
-            <p>Un convertidor de unidades.<br>
-                <a href="https://l20660049.github.io/PORTAFOLIO-ACT6/" target="_blank">Ver Proyecto</a>
-            </p>
-        </div>
-    </div>
-    <div class="modal" id="modal-proyecto14">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Contador de Palabras y Caracteres</h3>
-            <p>Un proyecto que cuenta palabras y caracteres.<br>
-                <a href="https://l20660049.github.io/PORTAFOLIO-ACT7/" target="_blank">Ver Proyecto</a>
-            </p>
-        </div>
-    </div>
-    <div class="modal" id="modal-proyecto15">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Cronómetro</h3>
-            <p>Un cronómetro simple.<br>
-                <a href="https://l20660049.github.io/PORTAFOLIO-ACT9/" target="_blank">Ver Proyecto</a>
-            </p>
-        </div>
-    </div>
-    <div class="modal" id="modal-proyecto16">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Galería Aleatoria</h3>
-            <p>Una galería de imágenes aleatorias.<br>
-                <a href="https://l20660049.github.io/ACTIVIDAD1-GALERIA/" target="_blank">Ver Proyecto</a>
-            </p>
-        </div>
-    </div>
-    <div class="modal" id="modal-proyecto17">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Notas</h3>
-            <p>Una aplicación para tomar notas.<br>
-                <a href="https://l20660049.github.io/ACTIVIDAD3-NOTAS/" target="_blank">Ver Proyecto</a>
-            </p>
-        </div>
-    </div>
 
     <!-- Enlace al archivo JavaScript para las interacciones del sitio -->
     <script src="script.js"></script>
-
 
 </body>
 </html>
